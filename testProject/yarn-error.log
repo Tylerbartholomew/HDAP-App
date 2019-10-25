@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add nodejs-mem
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo@^35.0.0
 
 PATH: 
   C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\Jack Fetzer\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Jack Fetzer\AppData\Local\Programs\Python\Python37\;C:\Users\Jack Fetzer\AppData\Local\Microsoft\WindowsApps;C:\Users\Jack Fetzer\AppData\Local\atom\bin;C:\Users\Jack Fetzer\AppData\Local\GitHubDesktop\bin;C:\Users\Jack Fetzer\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Jack Fetzer\AppData\Local\Microsoft\WindowsApps;C:\Users\Jack Fetzer\AppData\Local\Android\Sdk\platform-tools;C:\Users\Jack Fetzer\AppData\Local\Yarn\bin;C:\Users\Jack Fetzer\AppData\Roaming\npm
@@ -14,17 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/nodejs-mem: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66027:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140539:22)
-      at Request.emit (events.js:196:13)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141511:10)
-      at Request.emit (events.js:196:13)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141433:12)
-      at Object.onceWrapper (events.js:284:20)
-      at IncomingMessage.emit (events.js:201:15)
-      at endReadableNT (_stream_readable.js:1130:12)
-      at processTicksAndRejections (internal/process/task_queues.js:83:17)
+  SyntaxError: C:\Users\Jack Fetzer\AppData\Local\Yarn\Cache\v5\npm-diff-sequences-24.9.0-5715d6244e2aa65f48bba0bc972db0b0b11e95b5\node_modules\diff-sequences\.yarn-metadata.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
 
 npm manifest: 
   {
@@ -49,13 +44,17 @@ npm manifest:
       "expo-constants": "^7.0.0",
       "expo-font": "^7.0.0",
       "expo-web-browser": "^7.0.0",
+      "mem": "^5.1.1",
       "react": "16.8.3",
       "react-dom": "16.8.3",
       "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
       "react-native-gesture-handler": "~1.3.0",
       "react-native-web": "^0.11.7",
       "react-navigation": "^3.12.0",
-      "ws": "^7.1.2"
+      "wget": "0.0.1",
+      "ws": "^7.1.2",
+      "yarn": "^1.19.1",
+      "yarnpkg": "^0.15.1"
     },
     "devDependencies": {
       "babel-preset-expo": "^7.0.0",
@@ -1551,7 +1550,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
     integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
   
-  async-limiter@~1.0.0:
+  async-limiter@^1.0.0, async-limiter@~1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
     integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
@@ -4388,6 +4387,13 @@ Lockfile:
     dependencies:
       tmpl "1.0.x"
   
+  map-age-cleaner@^0.1.3:
+    version "0.1.3"
+    resolved "https://registry.yarnpkg.com/map-age-cleaner/-/map-age-cleaner-0.1.3.tgz#7d583a7306434c055fe474b0f45078e6e1b4b92a"
+    integrity sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==
+    dependencies:
+      p-defer "^1.0.0"
+  
   map-cache@^0.2.2:
     version "0.2.2"
     resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
@@ -4418,6 +4424,15 @@ Lockfile:
     integrity sha1-Xt1StIXKHZAP5kiVUFOZoN+kX3Y=
     dependencies:
       mimic-fn "^1.0.0"
+  
+  mem@^5.1.1:
+    version "5.1.1"
+    resolved "https://registry.yarnpkg.com/mem/-/mem-5.1.1.tgz#7059b67bf9ac2c924c9f1cff7155a064394adfb3"
+    integrity sha512-qvwipnozMohxLXG1pOqoLiZKNkC4r4qqRucSoDwXowsNGDSULiqFTRUF05vcZWnwJSG22qTsynQhxbaMtnX9gw==
+    dependencies:
+      map-age-cleaner "^0.1.3"
+      mimic-fn "^2.1.0"
+      p-is-promise "^2.1.0"
   
   merge-stream@^1.0.1:
     version "1.0.1"
@@ -4823,6 +4838,11 @@ Lockfile:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
     integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
+  
+  mimic-fn@^2.1.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
+    integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
   
   min-document@^2.19.0:
     version "2.19.0"
@@ -5265,6 +5285,11 @@ Lockfile:
       os-homedir "^1.0.0"
       os-tmpdir "^1.0.0"
   
+  p-defer@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
+    integrity sha1-n26xgvbJqozXQwBKfU+WsZaw+ww=
+  
   p-each-series@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/p-each-series/-/p-each-series-1.0.0.tgz#930f3d12dd1f50e7434457a22cd6f04ac6ad7f71"
@@ -5276,6 +5301,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
     integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
+  
+  p-is-promise@^2.1.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-2.1.0.tgz#918cebaea248a62cf7ffab8e3bca8c5f882fc42e"
+    integrity sha512-Y3W0wlRPK8ZMRbNq97l4M5otioeA5lm1z7bkNkxCka8HSPjR0xRWmpCmc9utiaLP9Jb1eD8BgeIxTW4AIF45Pg==
   
   p-limit@^1.1.0:
     version "1.3.0"
@@ -7180,6 +7210,13 @@ Lockfile:
     integrity sha512-jaHFD6PFv6UgoIVda6qZllptQsMlDEJkTQcybzzXDYM1XO9Y8em691FGMPmM46WGyLU4z9KMgQN+qrux/nhlHA==
     dependencies:
       async-limiter "~1.0.0"
+  
+  ws@^7.1.2:
+    version "7.1.2"
+    resolved "https://registry.yarnpkg.com/ws/-/ws-7.1.2.tgz#c672d1629de8bb27a9699eb599be47aeeedd8f73"
+    integrity sha512-gftXq3XI81cJCgkUiAVixA0raD9IVmXqsylCrjRygw4+UOOGzPoxnQ6r/CnVL9i+mDncJo94tSkyrtuuQVBmrg==
+    dependencies:
+      async-limiter "^1.0.0"
   
   xcode@^2.0.0:
     version "2.0.0"
