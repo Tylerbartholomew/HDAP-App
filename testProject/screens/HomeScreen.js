@@ -1,3 +1,6 @@
+// This is the home page of the app
+// It appears when the app is opened Contains welcome information
+
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
