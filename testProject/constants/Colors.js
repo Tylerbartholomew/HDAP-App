@@ -1,4 +1,4 @@
-const primary = '#000000';
+const primary = '#6d76c0';
 
 export default {
   primary: primary,
