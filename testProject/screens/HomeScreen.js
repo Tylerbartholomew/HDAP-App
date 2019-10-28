@@ -100,26 +100,30 @@ function DevelopmentModeNotice() {
   }
 }
 
+// This function directs to an external when the learn more button is pressed
 function handleLearnMorePress() {
   WebBrowser.openBrowserAsync(
     'https://docs.expo.io/versions/latest/workflow/development-mode/'
   );
 }
 
+// This function directs to an external link when the help button is pressed
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
     'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
   );
 }
 
+// Set up a Cascading Style Sheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
+  // Text when in development mode
   developmentModeText: {
     marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
+    color: 'rgba(0,0,0,0.4)', // White, opacity 40%
     fontSize: 14,
     lineHeight: 19,
     textAlign: 'center',
@@ -161,26 +165,30 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
+  // Sets up the CSS for the tab bar
   tabBarInfoContainer: {
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     ...Platform.select({
+      // When on IOS
       ios: {
         shadowColor: 'black',
         shadowOffset: { width: 0, height: -3 },
         shadowOpacity: 0.1,
         shadowRadius: 3,
       },
+      // When on Android
       android: {
         elevation: 20,
       },
     }),
     alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    backgroundColor: '#fbfbfb', // Light Gray: RGB(251, 251, 251), HSL(0, 0%, 98%)
     paddingVertical: 20,
   },
+  // The info text on the tab bar
   tabBarInfoText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
@@ -198,6 +206,6 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: '#2e78b7',   // Blue: RGB(46, 120, 183), HSL(208, 60%, 45%)
   },
 });

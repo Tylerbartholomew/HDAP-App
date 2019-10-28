@@ -1,3 +1,5 @@
+// This page contains all necessary external links
+
 import React from 'react';
 import { 
   ScrollView, 
