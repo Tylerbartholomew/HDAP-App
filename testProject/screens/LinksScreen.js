@@ -67,8 +67,9 @@ const styles = StyleSheet.create({
     marginTop: 1,
   },
   hairLine: {
-    margin: 6,
+    marginTop: 6,
+    marginBottom: 6,
     backgroundColor: '#3d3d3d',
-    height: 3,
+    height: 2,
   },
 });
