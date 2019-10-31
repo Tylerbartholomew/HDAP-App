@@ -1,7 +1,6 @@
 // This is the home page of the app
 // It appears when the app is opened Contains welcome information
-
-import * as WebBrowser from 'expo-web-browser';
+import WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   Image,
@@ -35,40 +34,8 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
-
-          <Text style={styles.getStartedText}>Get started by opening</Text>
-
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            Change this text and your app will automatically reload.
-          </Text>
-        </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
-          </TouchableOpacity>
         </View>
       </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View>
     </View>
   );
 }
@@ -110,7 +77,7 @@ function handleLearnMorePress() {
 // This function directs to an external link when the help button is pressed
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
+    'https://www.hdap.org/'
   );
 }
 
@@ -151,9 +118,6 @@ const styles = StyleSheet.create({
   homeScreenFilename: {
     marginVertical: 7,
   },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
   codeHighlightContainer: {
     backgroundColor: 'rgba(0,0,0,0.05)',
     borderRadius: 3,
@@ -165,38 +129,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
-  // Sets up the CSS for the tab bar
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      // When on IOS
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      // When on Android
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb', // Light Gray: RGB(251, 251, 251), HSL(0, 0%, 98%)
-    paddingVertical: 20,
-  },
-  // The info text on the tab bar
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
-  navigationFilename: {
-    marginTop: 5,
-  },
   helpContainer: {
     marginTop: 15,
     alignItems: 'center',
@@ -206,6 +138,6 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     fontSize: 14,
-    color: '#2e78b7',   // Blue: RGB(46, 120, 183), HSL(208, 60%, 45%)
+    color: '#2e78b7', // Blue: RGB(46, 120, 183), HSL(208, 60%, 45%)
   },
 });
