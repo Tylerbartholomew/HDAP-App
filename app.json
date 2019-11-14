@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HDAP-App",
-    "slug": "HPAP-App",
+    "name": "HDAP",
+    "slug": "HPAP",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -15,7 +15,7 @@
       "bundleIdentifier": "com.HCCodeClub.testProject",
       "supportsTablet": true
     },
-    "version": "1.0.4",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "primaryColor": "#6d76c0",
