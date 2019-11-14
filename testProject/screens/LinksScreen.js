@@ -1,5 +1,4 @@
 // This page contains all necessary external links
-
 import React from 'react';
 import { 
   ScrollView, 
@@ -10,7 +9,7 @@ import {
   Line,
   TouchableOpacity
 } from 'react-native';
-import WebBrowser from 'expo-web-browser';  // Imports the web browser so that the links can open in a web browser
+import * as WebBrowser from 'expo-web-browser';  // Imports the web browser so that the links can open in a web browser
 
 // Renders the screen on the device
 export default function LinksScreen() {

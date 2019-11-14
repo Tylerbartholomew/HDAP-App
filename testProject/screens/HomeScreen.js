@@ -1,6 +1,6 @@
 // This is the home page of the app
 // It appears when the app is opened Contains welcome information
-import WebBrowser from 'expo-web-browser';
+import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   Image,
@@ -24,9 +24,7 @@ export default function HomeScreen() {
         <View style={styles.welcomeContainer}>
           <Image
             source={
-              __DEV__
-                ? require('../assets/images/hdap-logo.png')
-                : require('../assets/images/hdap-logo.png')
+                require('../assets/images/hdap-logo.png')
             }
             style={styles.welcomeImage}
           />
