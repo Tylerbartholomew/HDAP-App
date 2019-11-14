@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "testProject",
-    "slug": "testProject",
+    "name": "HDAP-App",
+    "slug": "HPAP-App",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
