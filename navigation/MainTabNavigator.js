@@ -13,6 +13,7 @@ const config = Platform.select({
   default: {},
 });
 
+// Allows the user to navigate to the Home page
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -22,7 +23,7 @@ const HomeStack = createStackNavigator(
 
 HomeStack.navigationOptions = {
   
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Home',  // Sets the label on the tab bar to "home"
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'} />
   ),
@@ -30,6 +31,7 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
+// Allows the user to navigate to the Links page
 const LinksStack = createStackNavigator(
   {
     Links: LinksScreen,
@@ -38,7 +40,7 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+  tabBarLabel: 'Links', // Sets the label on the tab bar to "links"
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
@@ -46,6 +48,7 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
+// Allows the user to navigate to the About page
 const AboutStack = createStackNavigator(
   {
     About: AboutScreen,
@@ -54,7 +57,7 @@ const AboutStack = createStackNavigator(
 );
 
 AboutStack.navigationOptions = {
-  tabBarLabel: 'About',
+  tabBarLabel: 'About', // Sets the label on the tab bar to "about"
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} />
   ),
@@ -62,6 +65,7 @@ AboutStack.navigationOptions = {
 
 AboutStack.path = '';
 
+// Allows the user to navigate to the settings page
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -70,7 +74,7 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Settings', // Sets the label on the tab bar to "settings"
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
@@ -78,11 +82,12 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+// Creates the tab navigator at the bottom of the screen
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  AboutStack,
-  SettingsStack,
+  HomeStack,      // The button that navigates to the home screen
+  LinksStack,     // The button that navigates to the links screen
+  AboutStack,     // The button that navigates to the about screen
+  SettingsStack,  // The button that navigates to the settings screen
 });
 
 tabNavigator.path = '';
