@@ -8,11 +8,23 @@
       "ios",
       "android"
     ],
+    "packagerOpts": {
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "svgx",
+        "json",
+        "ts",
+        "tsx",
+        "vue"
+      ]
+    },
     "android": {
-      "package": "com.HCCodeClub.testProject"
+      "package": "com.HCCodeClub.HDAPApp"
     },
     "ios": {
-      "bundleIdentifier": "com.HCCodeClub.testProject",
+      "bundleIdentifier": "com.HCCodeClub.HDAPApp",
       "supportsTablet": true
     },
     "version": "1.0.6",
