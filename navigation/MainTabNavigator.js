@@ -7,6 +7,7 @@ import AboutScreen from '../screens/AboutScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ResourcesScreen from '../screens/ResourcesScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -48,6 +49,24 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
+// Allows the user to navigate to the about page
+const ResourcesStack = createStackNavigator(
+  {
+    Resources: ResourcesScreen,
+  },
+  config
+);
+
+ResourcesStack.navigationOptions = {
+  
+  tabBarLabel: 'Resources',  // Sets the label on the tab bar to "Resources"
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'} />
+  ),
+};
+
+ResourcesStack.path = '';
+
 // Allows the user to navigate to the About page
 const AboutStack = createStackNavigator(
   {
@@ -82,10 +101,13 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+
+
 // Creates the tab navigator at the bottom of the screen
 const tabNavigator = createBottomTabNavigator({
   HomeStack,      // The button that navigates to the home screen
   LinksStack,     // The button that navigates to the links screen
+  ResourcesStack, // The button that navigates to the resources page
   AboutStack,     // The button that navigates to the about screen
   SettingsStack,  // The button that navigates to the settings screen
 });
